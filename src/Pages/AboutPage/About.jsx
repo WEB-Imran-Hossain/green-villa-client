@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="hero min-h-screen max-w-[90vw] mx-auto ">
+        <div className="hero min-h-screen max-w-[90vw] mx-auto my-10">
             <div className="hero-content flex-col lg:flex-row flex-col-reverse">
                 <div className="lg:w-1/2 lg:mt-0 lg:text-left w-10/12">
                     <div className="lg:w-4/5 space-y-4">
