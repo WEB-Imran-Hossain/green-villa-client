@@ -5,6 +5,7 @@ const Navbar = () => {
 const menu=
 <>
 <li><Link to="/" className="hover:bg-inherit ">Home</Link></li>
+<li><Link to="/about" className="hover:bg-inherit ">About</Link></li>
 
 
 </>
