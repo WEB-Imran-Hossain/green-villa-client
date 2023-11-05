@@ -8,7 +8,7 @@ const About = () => {
                         <h5 className=" text-4xl md:text-5xl font-bold text-[#151515]">Best services and the experience of unique holidays</h5>
                         <p className="py-4 text-base font-normal text-[#737373]">One of the best services for unique holidays is <strong>Green Villa</strong> hotel planning. <strong>Green Villa</strong> tailored to your specific desires take into account your interests, budget, and preferred destinations, ensuring that every aspect of your trip is personalized.
                         </p>
-                        <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-md normal-case ">Discover More</button>
+                        <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">Discover More</button>
                     </div>
                 </div>
                 <div className="relative ml-14">
