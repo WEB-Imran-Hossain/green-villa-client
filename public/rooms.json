@@ -1,0 +1,134 @@
+{
+    "Rooms": [
+      {
+        "Room": {
+          "Room Image": "https://example.com/room1-image.jpg",
+          "Room Description": "Standard Single Room with City View",
+          "Price per Night": "$100",
+          "Room Size": "250 sq. ft",
+          "Availability": "Available",
+          "Special Offers": "Free breakfast included",
+          "Book Now": "https://example.com/book-now-room1",
+          "Unavailable Room Info": {
+            "Next Available Date": "2023-11-15",
+            "Reason for Unavailability": "Undergoing maintenance"
+          },
+          "Reviews": [],
+          "Booking Duration (Single Day)": "Select your preferred check-in and check-out dates",
+          "Room Summary": "Enjoy a comfortable stay in our standard single room with a city view. The room size is 250 sq. ft, and you can book it for $100 per night. Book now and enjoy a complimentary breakfast."
+        }
+      },
+      {
+        "Room": {
+          "Room Image": "https://example.com/room2-image.jpg",
+          "Room Description": "Deluxe King Suite with Balcony",
+          "Price per Night": "$300",
+          "Room Size": "600 sq. ft",
+          "Availability": "Available",
+          "Special Offers": "15% off for stays over 5 nights",
+          "Book Now": "https://example.com/book-now-room2",
+          "Unavailable Room Info": {
+            "Next Available Date": "2023-11-10",
+            "Reason for Unavailability": "Fully booked until the specified date"
+          },
+          "Reviews": [
+            {
+              "Guest Name": "Alice Johnson",
+              "Rating": 4.8,
+              "Review": "A luxurious suite with a fantastic balcony view!",
+              "Date": "2023-10-20"
+            }
+          ],
+          "Booking Duration (Single Day)": "Select your preferred check-in and check-out dates",
+          "Room Summary": "Indulge in the elegance of our deluxe king suite with a balcony. The room size is 600 sq. ft, and you can book it for $300 per night. Get a 15% discount for extended stays. Book now to experience luxury."
+        }
+      },
+      {
+        "Room": {
+          "Room Image": "https://example.com/room3-image.jpg",
+          "Room Description": "Family Suite with Two Bedrooms",
+          "Price per Night": "$250",
+          "Room Size": "800 sq. ft",
+          "Availability": "Available",
+          "Special Offers": "Kids stay free with two paying adults",
+          "Book Now": "https://example.com/book-now-room3",
+          "Unavailable Room Info": {
+            "Next Available Date": "2023-11-08",
+            "Reason for Unavailability": "Fully booked for family events"
+          },
+          "Reviews": [
+            {
+              "Guest Name": "David Brown",
+              "Rating": 4.7,
+              "Review": "Perfect for a family vacation. Spacious and comfortable!",
+              "Date": "2023-10-25"
+            }
+          ],
+          "Booking Duration (Single Day)": "Select your preferred check-in and check-out dates",
+          "Room Summary": "Experience the perfect family getaway in our spacious family suite with two bedrooms. The room size is 800 sq. ft, and you can book it for $250 per night. Kids stay free with two paying adults. Book now for a memorable family vacation."
+        }
+      },
+      {
+        "Room": {
+          "Room Image": "https://example.com/room4-image.jpg",
+          "Room Description": "Executive Suite with Sea View",
+          "Price per Night": "$400",
+          "Room Size": "700 sq. ft",
+          "Availability": "Available",
+          "Special Offers": "Complimentary spa access",
+          "Book Now": "https://example.com/book-now-room4",
+          "Unavailable Room Info": {
+            "Next Available Date": "2023-11-20",
+            "Reason for Unavailability": "Reserved for VIP guests"
+          },
+          "Reviews": [],
+          "Booking Duration (Single Day)": "Select your preferred check-in and check-out dates",
+          "Room Summary": "Indulge in luxury with our executive suite featuring a stunning sea view. The room size is 700 sq. ft, and you can book it for $400 per night. Enjoy complimentary spa access with your stay. Book now for a relaxing retreat."
+        }
+      },
+      {
+        "Room": {
+          "Room Image": "https://example.com/room5-image.jpg",
+          "Room Description": "Presidential Suite with Private Pool",
+          "Price per Night": "$800",
+          "Room Size": "1200 sq. ft",
+          "Availability": "Available",
+          "Special Offers": "Private butler service included",
+          "Book Now": "https://example.com/book-now-room5",
+          "Unavailable Room Info": {
+            "Next Available Date": "2023-11-12",
+            "Reason for Unavailability": "Reserved for exclusive events"
+          },
+          "Reviews": [],
+          "Booking Duration (Single Day)": "Select your preferred check-in and check-out dates",
+          "Room Summary": "Experience opulence in our presidential suite with a private pool. The room size is 1200 sq. ft, and you can book it for $800 per night. Enjoy private butler service with your stay. Book now for an unforgettable luxury experience."
+        }
+      },
+      {
+        "Room": {
+          "Room Image": "https://example.com/room6-image.jpg",
+          "Room Description": "Budget Twin Room",
+          "Price per Night": "$75",
+          "Room Size": "200 sq. ft",
+          "Availability": "Available",
+          "Special Offers": "10% off for students with valid ID",
+          "Book Now": "https://example.com/book-now-room6",
+          "Unavailable Room Info": {
+            "Next Available Date": "2023-11-07",
+            "Reason for Unavailability": "Fully booked until the specified date"
+          },
+          "Reviews": [
+            {
+              "Guest Name": "Emma Wilson",
+              "Rating": 3.9,
+              "Review": "Affordable and convenient for students!",
+              "Date": "2023-10-18"
+            }
+          ],
+          "Booking Duration (Single Day)": "Select your preferred check-in and check-out dates",
+          "Room Summary": "Enjoy a budget-friendly stay in our twin room. The room size is 200 sq. ft, and you can book it for $75 per night. Students with valid ID get a 10% discount. Book now for a cost-effective stay."
+        }
+      }
+    ]
+  }
+  
