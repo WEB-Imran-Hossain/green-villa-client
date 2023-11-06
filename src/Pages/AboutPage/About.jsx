@@ -1,3 +1,8 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const About = () => {
     return (
         <div className="hero min-h-screen max-w-[90vw] mx-auto my-10">
@@ -12,8 +17,8 @@ const About = () => {
                     </div>
                 </div>
                 <div className="relative ml-14">
-                    <img src="https://i.ibb.co/M2nLPCG/home-2.jpg" className="lg:w-full rounded-lg shadow-2xl" />
-                    <img src="https://i.ibb.co/7vzTPqM/home-1.jpg" className="w-1/2 rounded-lg shadow-2xl absolute  lg:top-60 lg:-left-24 top-28 -left-12 bottom-0 border-8  border-white" />
+                    <img data-aos="fade-right" src="https://i.ibb.co/M2nLPCG/home-2.jpg" className="lg:w-full rounded-lg shadow-2xl" />
+                    <img data-aos="fade-left" src="https://i.ibb.co/7vzTPqM/home-1.jpg" className="w-1/2 rounded-lg shadow-2xl absolute  lg:top-60 lg:-left-24 top-28 -left-12 bottom-0 border-8  border-white" />
                 </div>
             </div>
         </div>
