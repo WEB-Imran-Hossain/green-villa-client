@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const RoomCard = ({room}) => {
     const { _id, roomCategory, description, imageLg, pricePerNight } = room;
     return (
+       
         <div className="card bg-base-100 shadow-xl border rounded-lg cursor-pointer">
         <figure className="">
             <img src={imageLg} className="w-full" />
@@ -21,6 +22,7 @@ const RoomCard = ({room}) => {
             </Link>
         </div>
     </div>
+
     );
 };
 

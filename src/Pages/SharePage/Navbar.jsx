@@ -19,6 +19,7 @@ const Navbar = () => {
             <li><Link to="/rooms" className="hover:bg-inherit ">Rooms</Link></li>
             <li><Link to="/mybooking" className="hover:bg-inherit ">My Bookings</Link></li>
             <li><Link to="/contact" className="hover:bg-inherit ">Contact</Link></li>
+            <li><Link to="/booking" className="hover:bg-inherit ">Booking</Link></li>
         </>
 
     return (
@@ -32,9 +33,14 @@ const Navbar = () => {
                         {menu}
                     </ul>
                 </div>
+                <div className="hidden md:hidden lg:block">
+                    <Link to="/" className="text-xl">
+                        <img className='w-28' src="https://i.ibb.co/09yDWQS/gv-log.png" alt="" />
+                    </Link>
+                </div>
             </div>
             <div>
-                <div>
+                <div className="lg:hidden">
                     <Link to="/" className="text-xl">
                         <img className='w-28' src="https://i.ibb.co/09yDWQS/gv-log.png" alt="" />
                     </Link>

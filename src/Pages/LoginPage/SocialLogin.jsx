@@ -14,8 +14,10 @@ const SocialLogin = () => {
         googleLogin()
             .then((res) => {
                 console.log(res);
-                toast("User Created/Login Successfully!!", { position: "top-center" });
-                userNavigate(userLocation.state ? userLocation.state : "/");
+                if (res.user) {
+                    toast("User Created/Login Successfully!!", { position: "top-center" });
+                    userNavigate(userLocation.state ? userLocation.state : "/");
+                }
             })
             .catch((error) => console.log(error));
     };

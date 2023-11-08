@@ -1,5 +1,7 @@
 import About from "../AboutPage/About";
+import MapLocation from "../MapLocationPage/MapLocation";
 import NewsLetter from "../NewsLetterPage/NewsLetter";
+import Rooms from "../RoomsPage/Rooms";
 import Banner from "./Banner";
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
             <Banner></Banner>
             <About></About>
             <NewsLetter></NewsLetter>
+            <Rooms></Rooms>
+            <MapLocation></MapLocation>
         </div>
     );
 };

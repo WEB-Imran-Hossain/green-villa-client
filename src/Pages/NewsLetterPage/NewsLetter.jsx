@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 const NewsLetter = () => {
     return (
-        <div className='flex flex-col lg:flex-row items-center justify-around bg-[#32CD32] p-16 lg:p-36'>
+        <div className='flex flex-col lg:flex-row items-center justify-around p-16 lg:p-36' style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
             <div className='flex flex-col lg:flex-row items-center gap-8 text-white text-center lg:text-left '>
                 <div data-aos="fade-down" className='text-5xl'>
                     <FaEnvelopeOpenText></FaEnvelopeOpenText>

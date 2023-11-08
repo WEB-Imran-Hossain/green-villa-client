@@ -1,7 +1,9 @@
-import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
 
-const MyBookings = ({ order, handleDelete, handleOrderConfirm }) => {
-    const { _id, fname, email, phone, img, status } = order;
+
+const MyBookings = ({ bookings, handleDelete, handleOrderConfirm }) => {
+    const room = useLoaderData();
+    const { _id, fname, email, phone, img, status } = bookings;
 
 
     return (

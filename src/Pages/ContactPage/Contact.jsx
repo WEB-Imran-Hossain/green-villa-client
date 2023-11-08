@@ -9,7 +9,7 @@ const Contact = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md space-y-5">
                         <h4 className="text-xl font-bold text-white">LUXURY HOTEL EXPERIENCE</h4>
-                        <h1 className="text-4xl md:text-5xl font-bold">CONTACT US</h1>
+                        <h1 className="text-5xl lg:text-7xl font-bold">CONTACT US</h1>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,8 @@ const Contact = () => {
                 </div>
             </div>
             {/* map location */}
-            <div className="hero h-[65vh]" style={{ backgroundImage: 'url(https://i.ibb.co/HGzR50X/Google-map.jpg)' }}>
+            <div className="hero h-[65vh]">
+                <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6423.354397529087!2d-118.26036979440008!3d34.049347308753376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b55ce2a9bb%3A0x78efbaded7d0733d!2sJuanita&#39;s%20Restaurant!5e0!3m2!1sen!2sbd!4v1699455009459!5m2!1sen!2sbd"></iframe>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                 </div>
@@ -101,58 +102,58 @@ const Contact = () => {
                 <div className='space-y-4'>
                     <h4 className="text-xl font-bold text-[#32CD32]">Green Villa Hotel</h4>
                     <h1 className="text-4xl md:text-5xl font-bold text-[#151515]">Check Availability</h1>
-                   <div>
-                  <div className='flex items-center gap-3'>
-                  <BsTelephone className='text-3xl'></BsTelephone>
-                   <p className='text-base font-bold'>Info and Bookings</p>
-                  </div>
-                   <div>
-                   <p className='text-lg font-normal mt-5 text-[#737373]'>+ 61 (2) 8093 3402</p>
-                   </div>
-                   </div>
+                    <div>
+                        <div className='flex items-center gap-3'>
+                            <BsTelephone className='text-3xl'></BsTelephone>
+                            <p className='text-base font-bold'>Info and Bookings</p>
+                        </div>
+                        <div>
+                            <p className='text-lg font-normal mt-5 text-[#737373]'>+ 61 (2) 8093 3402</p>
+                        </div>
+                    </div>
                 </div>
 
                 <form className="mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6">
-                <div className="flex items-center justify-between px-3 py-4 border">
-                    <input type="date" className=" normal-case text-sm outline-none border-none w-full" />
-                </div>
-                <div className="flex items-center justify-between px-3 py-4 border">
-                    <input type="date" className="normal-case text-sm outline-none border-none w-full" />
-                </div>
-                <div className="px-2 py-4 border">
-                    <select className="min-w-full normal-case outline-none">
-                        <option disabled selected>Adults</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
-                </div>
-                <div className="px-2 py-4 border">
-                    <select className="min-w-full normal-case outline-none">
-                        <option disabled selected>Children</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
-                </div>
-                <div className="px-2 py-4 border">
-                    <select className="min-w-full normal-case outline-none">
-                        <option selected>Select Room</option>
-                        <option>Double Room</option>
-                        <option>Deluxe Room</option>
-                        <option>Superior Room</option>
-                        <option>Luxury Room</option>
-                        <option>Luxury Suite Room</option>
-                        <option>Signature Room</option>
-                        <option>Masterclass Room</option>
-                        <option>Junior Suite</option>
-                       
-                    </select>
-                </div>
-                <input className='btn text-white bg-[#FF3811] border-[#FF3811]  hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case hover:bg-transparent min-h-[60px] flex items-center justify-center' type="submit" value="Book Now" />
-            </form>
+                    <div className="flex items-center justify-between px-3 py-4 border">
+                        <input type="date" className=" normal-case text-sm outline-none border-none w-full" />
+                    </div>
+                    <div className="flex items-center justify-between px-3 py-4 border">
+                        <input type="date" className="normal-case text-sm outline-none border-none w-full" />
+                    </div>
+                    <div className="px-2 py-4 border">
+                        <select className="min-w-full normal-case outline-none">
+                            <option disabled selected>Adults</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div className="px-2 py-4 border">
+                        <select className="min-w-full normal-case outline-none">
+                            <option disabled selected>Children</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div className="px-2 py-4 border">
+                        <select className="min-w-full normal-case outline-none">
+                            <option selected>Select Room</option>
+                            <option>Double Room</option>
+                            <option>Deluxe Room</option>
+                            <option>Superior Room</option>
+                            <option>Luxury Room</option>
+                            <option>Luxury Suite Room</option>
+                            <option>Signature Room</option>
+                            <option>Masterclass Room</option>
+                            <option>Junior Suite</option>
+
+                        </select>
+                    </div>
+                    <input className='btn text-white bg-[#FF3811] border-[#FF3811]  hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case hover:bg-transparent min-h-[60px] flex items-center justify-center' type="submit" value="Book Now" />
+                </form>
             </div>
-            
+
         </div>
     );
 };
