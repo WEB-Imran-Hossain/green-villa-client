@@ -17,7 +17,7 @@ const Navbar = () => {
             <li><Link to="/" className="hover:bg-inherit ">Home</Link></li>
             <li><Link to="/about" className="hover:bg-inherit ">About</Link></li>
             <li><Link to="/rooms" className="hover:bg-inherit ">Rooms</Link></li>
-            <li><Link to="/mybookings" className="hover:bg-inherit ">My Bookings</Link></li>
+            <li><Link to="/mybooking" className="hover:bg-inherit ">My Bookings</Link></li>
             <li><Link to="/contact" className="hover:bg-inherit ">Contact</Link></li>
         </>
 
