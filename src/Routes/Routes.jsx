@@ -9,8 +9,9 @@ import Login from "../Pages/LoginPage/Login";
 import Registration from "../Pages/RegistrationPage/Registration";
 import Contact from "../Pages/ContactPage/Contact";
 import PrivateRoutes from "./PrivateRoutes";
-import BookingDetails from "../Pages/MyBookingsPage/BookingDetails";
-import Booking from "../Pages/BookingsPage/Booking";
+import Booking from "../Pages/BookingsNowPage/BookNowForm";
+import RoomDetails from "../Pages/RoomDetailsPage/RoomDetails";
+import BookNowForm from "../Pages/BookingsNowPage/BookNowForm";
 
 const router = createBrowserRouter([
     {
@@ -27,15 +28,6 @@ const router = createBrowserRouter([
                 element: <About></About>
             },
             {
-                path: "/rooms",
-                element: <Rooms></Rooms>
-            },
-            {
-                path: "/rooms/:id",
-                element: <Rooms></Rooms>,
-                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
-            },
-            {
                 path: "/login",
                 element: <Login></Login>
             },
@@ -48,16 +40,14 @@ const router = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path: "/mybooking",
-                element: <PrivateRoutes><MyBookings></MyBookings></PrivateRoutes>
-            },
-            {
-                path: "/booking",
-                element: <Booking></Booking>
-            },
-            {
                 path: "/rooms/:id",
-                element: <BookingDetails></BookingDetails>
+                element: <RoomDetails></RoomDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+            },
+            {
+                path: "/bookingForm/:id",
+                element: <BookNowForm></BookNowForm>,
+                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
             }
         ]
     },

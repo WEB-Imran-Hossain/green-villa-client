@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const MyBookings = ({ bookings, handleDelete, handleOrderConfirm }) => {
     const room = useLoaderData();
-    const { _id, fname, email, phone, img, status } = bookings;
+    const { _id, roomCategory, email, phone, img, status } = bookings;
 
 
     return (
