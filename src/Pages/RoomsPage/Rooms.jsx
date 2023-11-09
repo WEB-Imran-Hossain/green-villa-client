@@ -24,7 +24,7 @@ const Rooms = () => {
           }
         </div>
         <div className="text-center mt-12">
-          <button className="btn bg-transparent hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">View All Rooms</button>
+          <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case">View All Rooms</button>
         </div>
       </div>
 

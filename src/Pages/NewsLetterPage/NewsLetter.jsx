@@ -7,7 +7,7 @@ AOS.init();
 
 const NewsLetter = () => {
     return (
-        <div className='flex flex-col lg:flex-row items-center justify-around p-16 lg:p-36 bg-[#32CD32]'>
+        <div className='flex flex-col lg:flex-row items-center justify-around p-16 lg:p-36 bg-[#32CD32] mt-20 mb-20'>
             <div className='flex flex-col lg:flex-row items-center gap-8 text-white text-center lg:text-left'>
                 <div data-aos="fade-down" className='text-5xl'>
                     <FaEnvelopeOpenText></FaEnvelopeOpenText>
