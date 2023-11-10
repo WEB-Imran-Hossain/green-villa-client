@@ -30,18 +30,13 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link to="/mybooking" className="hover:bg-inherit ">
+        <Link to="/mybookings" className="hover:bg-inherit ">
           My Bookings
         </Link>
       </li>
       <li>
         <Link to="/contact" className="hover:bg-inherit ">
           Contact
-        </Link>
-      </li>
-      <li>
-        <Link to="/booking" className="hover:bg-inherit ">
-          Booking
         </Link>
       </li>
     </>

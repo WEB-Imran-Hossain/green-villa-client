@@ -2,7 +2,7 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 
 const RoomDetails = () => {
     const roomSingleData = useLoaderData();
-    const { _id, roomCategory, description, facilities, roomSize, availability, specialOffers, bookNow, unavailableRoomInfo, nextAvailableDate, reasonForUnavailability, reviews, pricePerNight, imageLg } = roomSingleData;
+    const { _id, roomCategory, description, facilities, roomSize, availability, specialOffers, bookNow, unavailableRoomInfo, nextAvailableDate, reasonForUnavailability, reviews, pricePerNight, imageLg, maxPerson } = roomSingleData;
     const navigate = useNavigate();
     console.log(roomSingleData);
 
@@ -37,7 +37,7 @@ const RoomDetails = () => {
 
             <div>
                 <div className="mt-8">
-                    <div className="flex justify-between">
+                    <div className="flex items-center justify-between">
                         <div className="card-actions flex justify-left">
                             <div>
                                 <small className="font-medium">Category</small>
@@ -45,9 +45,9 @@ const RoomDetails = () => {
                             </div>
                         </div>
                         <div className=" justify-right">
-                            <div>
-                                <small className="font-medium">Special Offers</small>
-                                <div className="badge ext-base font-semibold badge-outline ml-2 p-3">{specialOffers}</div>
+                            <div className="flex items-center justify-between">
+                                <small className="font-medium">Person</small>
+                                <div className="badge text-base font-semibold badge-outline ml-2 p-3">{roomSize}</div>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ const RoomDetails = () => {
                 <div className="card-actions justify-center">
 
                     <Link to={`/bookingForm/${_id}`}>
-                        <button className="btn bg-[#4e7661] w-40 h-6 text-white text-sm font-semibold border-transparent hover:bg-[#FFF] hover:border-transparent hover:bg-black hover:font-semibold rounded-sm mb-10">
+                        <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">
                             Book Now
                         </button>
                     </Link>

@@ -3,15 +3,14 @@ import Main from "../Layout/Main";
 import NotFound from "../Pages/SharePage/NotFound";
 import Home from "../Pages/HomePage/Home";
 import About from "../Pages/AboutPage/About";
-import Rooms from "../Pages/RoomsPage/Rooms";
-import MyBookings from "../Pages/MyBookingsPage/MyBookings";
 import Login from "../Pages/LoginPage/Login";
 import Registration from "../Pages/RegistrationPage/Registration";
 import Contact from "../Pages/ContactPage/Contact";
-import PrivateRoutes from "./PrivateRoutes";
-import Booking from "../Pages/BookingsNowPage/BookNowForm";
 import RoomDetails from "../Pages/RoomDetailsPage/RoomDetails";
-import BookNowForm from "../Pages/BookingsNowPage/BookNowForm";
+import BookNowForm from "../Pages/BookNowFormPage/BookNowForm";
+import AllReview from "../Pages/ReviewsPage/AllReview";
+import Rooms from "../Pages/RoomsPage/Rooms";
+import MyBookings from "../Pages/MyBookingsPage/MyBookings";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +27,14 @@ const router = createBrowserRouter([
                 element: <About></About>
             },
             {
+                path: "/rooms",
+                element: <Rooms></Rooms>
+            },
+            {
+                path: "/mybookings",
+                element: <MyBookings></MyBookings>
+            },
+            {
                 path: "/login",
                 element: <Login></Login>
             },
@@ -38,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact></Contact>
+            },
+            {
+                path: "/reviws",
+                element: <AllReview></AllReview>
             },
             {
                 path: "/rooms/:id",

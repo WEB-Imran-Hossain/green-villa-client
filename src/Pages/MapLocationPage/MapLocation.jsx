@@ -8,7 +8,7 @@ AOS.init();
 
 const MapLocation = () => {
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl max-w-[90vw] mx-auto mt-32">
+        <div className="card lg:card-side bg-base-100 shadow-xl max-w-[90vw] mx-auto mt-32 mb-32">
             <figure><iframe
                 data-aos="fade-left"
                 className=" w-full lg:w-[70rem] h-[50rem]"

@@ -1,6 +1,6 @@
 const SpecialOffer = () => {
   return (
-    <div className=" max-w-[90vw] mx-auto space-y-4 space-y-4">
+    <div className=" max-w-[90vw] mx-auto space-y-4 space-y-4 mt-32">
       <h4 className="text-xl font-bold text-[#32CD32]">OFFERS</h4>
       <h5 className=" text-4xl md:text-5xl font-bold text-[#151515]">
         Green Villa Special Offers
