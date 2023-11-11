@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import PostReview from "../ReviewsPage/PostReview";
 
 const RoomDetails = () => {
     const roomSingleData = useLoaderData();
@@ -6,27 +7,7 @@ const RoomDetails = () => {
     const navigate = useNavigate();
     console.log(roomSingleData);
 
-    // const handleBookNowButton = () => {
-    //     fetch('http://localhost:5173/rooms/654ac2b4be4e594170d5b030', {
-    //         method: "POST",
-    //         headers: {
-    //             "content-type": "application/json",
-    //         },
-    //         body: JSON.stringify(roomSingleData),
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.insertedId) {
-    //                 Swal.fire(
-    //                     'Added',
-    //                     'Product added to cart successfully',
-    //                     'success'
-    //                 )
-    //                 navigate("/mybooking")
-    //             }
-    //         })
-    // }
+
     return (
         <div className="mt-20 mb-20 lg:w-[50vw] mx-auto p-10">
             <div>
@@ -40,14 +21,13 @@ const RoomDetails = () => {
                     <div className="flex items-center justify-between">
                         <div className="card-actions flex justify-left">
                             <div>
-                                <small className="font-medium">Category</small>
                                 <div className="badge text-base font-semibold badge-outline ml-2 p-3">{roomCategory}</div>
                             </div>
                         </div>
-                        <div className=" justify-right">
+                        <div className=" ">
                             <div className="flex items-center justify-between">
                                 <small className="font-medium">Person</small>
-                                <div className="badge text-base font-semibold badge-outline ml-2 p-3">{roomSize}</div>
+                                <div className="badge text-base font-semibold badge-outline ml-2 p-3">{maxPerson}</div>
                             </div>
                         </div>
                     </div>
@@ -70,13 +50,14 @@ const RoomDetails = () => {
                 <h2 className="text-4xl font-bold text-[#0B0B0B] mt-8">{roomSize}</h2>
                 <p className="text-base font-normal text-[#0b0b0bb3] text-justify mt-3 mb-10">{description}</p>
                 <div className="card-actions justify-center">
-
+                    
                     <Link to={`/bookingForm/${_id}`}>
                         <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">
                             Book Now
                         </button>
                     </Link>
                 </div>
+                <PostReview></PostReview>
             </div>
         </div>
     );

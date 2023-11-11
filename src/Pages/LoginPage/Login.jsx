@@ -91,17 +91,18 @@ const Login = () => {
               <div className="form-control mt-6">
                 <input className='btn text-white bg-[#FF3811] border-[#FF3811]  hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case hover:bg-transparent ' type="submit" value="Log In" />
               </div>
-              <div className='text-center space-y-6'>
-                <p className='mt-6 text-base font-normal text-[#737373]'>Or Sign In with</p>
-                <SocialLogin></SocialLogin>
-                <p className='text-base font-normal text-[#737373]'>By creating an account, you agree to our Terms of Service and Privacy Statement.</p>
-              </div>
+
             </form>
+            <div className='text-center space-y-6'>
+              <p className='mt-6 text-base font-normal text-[#737373]'>Or Sign In with</p>
+              <SocialLogin></SocialLogin>
+              <p className='text-base font-normal text-[#737373]'>By creating an account, you agree to our Terms of Service and Privacy Statement.</p>
+            </div>
             {registerError && <p className="text-red-600">{registerError}</p>}
             {successMessage && (
               <p className="text-green-600">{successMessage}</p>
             )}
-            
+
           </div>
         </div>
       </div>

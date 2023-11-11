@@ -11,6 +11,7 @@ import BookNowForm from "../Pages/BookNowFormPage/BookNowForm";
 import AllReview from "../Pages/ReviewsPage/AllReview";
 import Rooms from "../Pages/RoomsPage/Rooms";
 import MyBookings from "../Pages/MyBookingsPage/MyBookings";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -52,13 +53,17 @@ const router = createBrowserRouter([
             },
             {
                 path: "/rooms/:id",
-                element: <RoomDetails></RoomDetails>,
+                element: <PrivateRoutes><RoomDetails></RoomDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
             },
             {
                 path: "/bookingForm/:id",
                 element: <BookNowForm></BookNowForm>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+            },
+            {
+                path: "/bookingForm",
+                element: <PrivateRoutes><BookNowForm></BookNowForm></PrivateRoutes>
             }
         ]
     },

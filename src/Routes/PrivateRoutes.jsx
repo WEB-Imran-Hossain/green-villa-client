@@ -8,7 +8,7 @@ const PrivateRoutes = ({ children }) => {
     // console.log(location);
 
     if (loading) {
-        return <progress className="progress w-56"></progress>
+        return <span className="loading loading-spinner loading-lg bg-[#FF3811]"></span>
     }
 
     if (user) {
