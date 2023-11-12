@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { MdRemoveRedEye } from "react-icons/md";
 import { AiFillEyeInvisible } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../LoginPage/SocialLogin";
-import { sendEmailVerification, updateProfile } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
 
 const Registration = () => {
@@ -12,7 +12,8 @@ const Registration = () => {
   const [registerError, setRegisterError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const { createUser } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const userLocation = useLocation();
+  const userNavigate = useNavigate();
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -22,13 +23,11 @@ const Registration = () => {
     const password = event.target.password.value;
     console.log(name, email, image, password);
 
-    // reset error
+    // reset error and reset sucess
     setRegisterError("");
-
-    // reset sucess
     setSuccessMessage("");
 
-    // password validation
+    // user password validation
     if (password.length < 6) {
       setRegisterError("Password should be at least 6 characters or longer");
       return;
@@ -36,7 +35,7 @@ const Registration = () => {
       !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{7,}$/.test(password)
     ) {
       setRegisterError(
-        "Your password should have at least one uppercase character and special character "
+        "Your password should have at least one uppercase character and special character"
       );
       return;
     }
@@ -46,27 +45,21 @@ const Registration = () => {
     // create user
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
-        setSuccessMessage("User Created Successfully!!");
-        toast("User Created Successfully!!");
-
-        // update profile
-        updateProfile(result.user, {
+        if (result.user) {
+          toast("User Created/Login Successfully!!", {
+            position: "top-center",
+          });
+          userNavigate(userLocation.state ? userLocation.state : "/");
+        }
+        const currentUser = result.user;
+        updateProfile(currentUser, {
           displayName: name,
           photoURL: image,
+        }).then(() => {
+          console.log("User Updated");
+        }).catch(error => {
+          console.log(error);
         })
-          .then(() => console.log("profile updated"))
-          .catch();
-
-        // send varification email
-        sendEmailVerification(result.user)
-          .then(() => {
-            // toast("Please check your email and verfy your account!!");
-          })
-          .catch();
-        if (result.user) {
-          navigate("/");
-        }
       })
       .catch((error) => {
         console.error(error);
@@ -162,12 +155,10 @@ const Registration = () => {
               <div>
                 <input type="checkbox" required name="terms" id="terms" />
                 <label className="ml-2 label-text font-bold" htmlFor="terms">
-                  Yes, I agree with{" "}
-                  <a href="">
-                    <Link className="link link-hover" href="#">
+                Yes, I agree with{" "}<span> <Link className="link link-hover" href="#">
                       Terms of Use Conditions
                     </Link>
-                  </a>
+                  </span>
                 </label>
               </div>
               <br />

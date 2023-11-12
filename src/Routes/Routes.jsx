@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/mybookings",
-                element: <MyBookings></MyBookings>
+                element: <PrivateRoutes><MyBookings></MyBookings></PrivateRoutes>
             },
             {
                 path: "/login",

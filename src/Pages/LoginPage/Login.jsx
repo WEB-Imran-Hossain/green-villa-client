@@ -3,9 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import SocialLogin from "./SocialLogin";
 import { ToastContainer, toast } from "react-toastify";
-import {
-  sendPasswordResetEmail,
-} from "firebase/auth";
+import {sendPasswordResetEmail} from "firebase/auth";
 
 const Login = () => {
   const { signIn, user } = useContext(AuthContext);
@@ -30,10 +28,10 @@ const Login = () => {
     event.target.reset();
 
     signIn(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then((res) => {
+        console.log(res.user);
         if (user) {
-          userNavigate(userLocation.state ? userLocation.state : "/")
+          userNavigate(userLocation.state ? userLocation.state : "/");
         }
 
         console.log(user);
@@ -52,6 +50,8 @@ const Login = () => {
       console.log("Please write a valid email");
       return;
     }
+
+    
     // send validation email
     sendPasswordResetEmail(email)
       .then(() => {
@@ -91,8 +91,8 @@ const Login = () => {
               <div className="form-control mt-6">
                 <input className='btn text-white bg-[#FF3811] border-[#FF3811]  hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case hover:bg-transparent ' type="submit" value="Log In" />
               </div>
-
             </form>
+
             <div className='text-center space-y-6'>
               <p className='mt-6 text-base font-normal text-[#737373]'>Or Sign In with</p>
               <SocialLogin></SocialLogin>
@@ -102,7 +102,6 @@ const Login = () => {
             {successMessage && (
               <p className="text-green-600">{successMessage}</p>
             )}
-
           </div>
         </div>
       </div>

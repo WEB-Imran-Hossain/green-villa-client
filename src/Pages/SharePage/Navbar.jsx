@@ -1,14 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const userLocation = useLocation();
+    const userNavigate = useNavigate();
 
   const handleLogOut = () => {
     logOut()
-      .then(() => console.log("logout successfully"))
+      .then(() => {
+           
+              toast("Logout Successfully!!", {
+                position: "top-center",
+              });
+              userNavigate(userLocation.state ? userLocation.state : "/");
+          
+      })
       .catch((error) => console.error(error));
   };
 
@@ -30,13 +40,13 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link to="/mybookings" className="hover:bg-inherit ">
-          My Bookings
+        <Link to="/contact" className="hover:bg-inherit ">
+          Contact
         </Link>
       </li>
       <li>
-        <Link to="/contact" className="hover:bg-inherit ">
-          Contact
+        <Link to="/mybookings" className="hover:bg-inherit ">
+          My Bookings
         </Link>
       </li>
     </>
@@ -99,7 +109,7 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="text-4xl rounded-full">
-                <img src={user.photoURL} alt="" />
+                <img src={user.photoURL} alt="User_Profile" />
               </div>
             </label>
             <ul

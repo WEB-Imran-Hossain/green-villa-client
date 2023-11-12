@@ -6,26 +6,28 @@ import { app } from "../Firebase/firebase.config";
 
 
 export const AuthContext = createContext()
-const auth = getAuth(app);
+ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+// google login
     const googleLogin = () => {
         signInWithPopup(auth, googleProvider);
     }
-
+// create user
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
-
+// sign in user
     const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
-
+    
+// logout user
     const logOut = () => {
         setLoading(true);
         return signOut(auth);
