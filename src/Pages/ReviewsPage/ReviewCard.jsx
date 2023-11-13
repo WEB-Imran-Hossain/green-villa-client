@@ -1,11 +1,9 @@
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
-import { SwiperSlide } from 'swiper/react';
+
 
 const ReviewCard = ({ review }) => {
     const { _id, client_name, place, rating, comments, image_url } = review;
     return (
-
-        <SwiperSlide>
             <div className="card card-side bg-base-100 shadow-xl flex flex-col">
                 <div>
                     <FaQuoteLeft className='text-6xl text-[#737373] text-opacity-10 m-5'></FaQuoteLeft>
@@ -24,7 +22,6 @@ const ReviewCard = ({ review }) => {
                     <p className="text-base font-normal text-[#737373]">{comments}</p>
                 </div>
             </div>
-        </SwiperSlide>
     );
 };
 
