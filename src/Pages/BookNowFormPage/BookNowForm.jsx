@@ -86,16 +86,16 @@ const BookNowForm = () => {
                         <h1 className="text-2xl font-semibold text-black">
                             Let us know who you are
                         </h1>
-
+                        <br />
                         <form onSubmit={handleBookingForm}>
                             <div className="form-control">
-                                <p>{user?.displayName}</p>
+                                <p className="text-xl font-bold">Name: {user?.displayName}</p>
                             </div>
-                            <div className="flex gap-3">
-                                <div className="form-control w-1/2">
-                                    <p>{user?.email}</p>
+                            <div className="">
+                                <div className="form-control">
+                                    <p className="text-xl font-bold">Email: {user?.email}</p>
                                 </div>
-                                <div className="form-control w-1/2">
+                                <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Phone</span>
                                     </label>
@@ -156,14 +156,13 @@ const BookNowForm = () => {
                                     </span>
                                 </label>
                             </div>
-                            <div className="flex gap-3">
-                                <div className="form-control mt-6">
-                                    <input
-                                        className="btn text-white w-24 bg-[#FF3811] border-[#FF3811]  hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case hover:bg-transparent "
+                            <div className="flex gap-3 mt-5">
+                            <input
+                                        className="btn text-white w-full bg-[#FF3811] border-[#FF3811]  hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case hover:bg-transparent "
                                         type="submit"
                                         value="Submit"
                                     />
-                                </div>
+                             
                             </div>
                         </form>
                     </div>

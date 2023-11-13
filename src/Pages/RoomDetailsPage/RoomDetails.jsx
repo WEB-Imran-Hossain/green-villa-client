@@ -19,15 +19,17 @@ const RoomDetails = () => {
             <div>
                 <div className="mt-8">
                     <div className="flex items-center justify-between">
-                        <div className="card-actions flex justify-left">
+                   
+                        <div className="card-actions flex items-center">
                             <div>
+                            <small className="font-medium">Category</small>
                                 <div className="badge text-base font-semibold badge-outline ml-2 p-3">{roomCategory}</div>
                             </div>
                         </div>
                         <div className=" ">
                             <div className="flex items-center justify-between">
-                                <small className="font-medium">Person</small>
-                                <div className="badge text-base font-semibold badge-outline ml-2 p-3">{maxPerson}</div>
+                                <small className="font-medium">Space</small>
+                                <div className="badge text-base font-semibold badge-outline ml-2 p-3">{roomSize}</div>
                             </div>
                         </div>
                     </div>
@@ -35,7 +37,7 @@ const RoomDetails = () => {
                 <div>
                     <div className="flex items-center justify-between mt-5">
                         <div>
-                            <p className="text-3xl font-bold">$ {pricePerNight}</p>
+                            <p className="text-xl font-bold text-[#32CD32]">Form ${pricePerNight}/Night</p>
                         </div>
                         <div className="rating rating-md">
                             <input type="radio" name="rating-9" className="rating-hidden" />
@@ -47,8 +49,13 @@ const RoomDetails = () => {
                         </div>
                     </div>
                 </div>
-                <h2 className="text-4xl font-bold text-[#0B0B0B] mt-8">{roomSize}</h2>
+                <h2 className="text-4xl font-bold text-[#0B0B0B] mt-8">{availability}</h2>
+                <p className="text-4xl font-bold text-[#0B0B0B] mt-8">{specialOffers}</p>
+                <p className="text-4xl font-bold text-[#0B0B0B] mt-8">{reviews}</p>
+                <p className="text-4xl font-bold text-[#0B0B0B] mt-8">Person: {maxPerson}</p>
                 <p className="text-base font-normal text-[#0b0b0bb3] text-justify mt-3 mb-10">{description}</p>
+                <p className="text-base font-normal text-[#0b0b0bb3] text-justify mt-3 mb-10">{unavailableRoomInfo}</p> */}
+                {/* {/* <p className="text-base font-normal text-[#0b0b0bb3] text-justify mt-3 mb-10">{unavailableRoomInfo}</p> */}
                 <div className="card-actions justify-center">
                     
                     <Link to={`/bookingForm/${_id}`}>
