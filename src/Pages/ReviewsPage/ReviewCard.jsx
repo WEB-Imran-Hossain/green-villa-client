@@ -1,4 +1,5 @@
-import { FaQuoteLeft, FaStar } from 'react-icons/fa';
+import { FaQuoteLeft, FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 
 
 const ReviewCard = ({ review }) => {
@@ -13,12 +14,12 @@ const ReviewCard = ({ review }) => {
                 <div className="card-body flex items-center">
                     <h2 className="text-xl font-bold">{client_name}</h2>
                     <h4 className="text-sm text-[#32CD32]">{place}</h4>
-                    <div className='flex'>
-                        {[...Array(5)].map(star => {
-                            return <FaStar key={star} star={star} className='text-xl'>{rating}</FaStar>
-                        })}
-
-                    </div>
+                    <Rating className="text-2xl text-orange-500"
+                    placeholderRating={review?.rating}
+                    emptySymbol={<FaRegStar />}
+                    placeholderSymbol={<FaStar />}
+                    fullSymbol={<FaStar />}
+                  />
                     <p className="text-base font-normal text-[#737373]">{comments}</p>
                 </div>
             </div>
