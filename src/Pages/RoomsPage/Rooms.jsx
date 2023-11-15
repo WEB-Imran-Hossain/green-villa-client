@@ -8,8 +8,8 @@ const Rooms = () => {
     fetch("http://localhost:5000/rooms")
       .then((res) => res.json())
       .then((data) => {
-        
-        setRooms(data);
+        const filterdData = data.filter(item=>item.status!=="booked")
+        setRooms(filterdData);
       });
   }, []);
 
@@ -33,15 +33,10 @@ const Rooms = () => {
             </p>
           </h5>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {rooms.map((room) => (
             <RoomCard key={room._id} room={room}></RoomCard>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case">
-            View All Rooms
-          </button>
         </div>
       </div>
     </div>
