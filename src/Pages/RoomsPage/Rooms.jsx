@@ -7,7 +7,10 @@ const Rooms = () => {
   useEffect(() => {
     fetch("http://localhost:5000/rooms")
       .then((res) => res.json())
-      .then((data) => setRooms(data));
+      .then((data) => {
+        
+        setRooms(data);
+      });
   }, []);
 
   return (
@@ -20,10 +23,10 @@ const Rooms = () => {
           <h5 className=" text-4xl md:text-5xl font-bold text-[#151515]">
             Rooms & Suites
             <p className="py-4 text-base font-normal text-[#737373]">
-              Welcome to our <strong>Green Villa</strong> hotel, where luxury and comfort
-              converge to create an unparalleled experience for our esteemed
-              guests. Our meticulously designed hotel rooms and suites are a
-              testament to refined elegance, offering a sanctuary of
+              Welcome to our <strong>Green Villa</strong> hotel, where luxury
+              and comfort converge to create an unparalleled experience for our
+              esteemed guests. Our meticulously designed hotel rooms and suites
+              are a testament to refined elegance, offering a sanctuary of
               sophistication in the heart of city area. Whether you're here for
               business or leisure, our accommodations are tailored to meet the
               diverse needs of today's discerning travelers.

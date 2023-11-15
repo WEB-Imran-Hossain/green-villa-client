@@ -19,51 +19,57 @@ const router = createBrowserRouter([
         element: <Main></Main>,
         errorElement: <NotFound></NotFound>,
         children: [
+            // Home page
             {
                 path: "/",
                 element: <Home></Home>
             },
+            // About Page
             {
                 path: "/about",
                 element: <About></About>
             },
+            // Rooms Page
             {
                 path: "/rooms",
                 element: <Rooms></Rooms>
             },
+            // My Bookings Page
             {
                 path: "/mybookings",
                 element: <PrivateRoutes><MyBookings></MyBookings></PrivateRoutes>
             },
+            // Login Page
             {
                 path: "/login",
                 element: <Login></Login>
             },
+            // Registration Page
             {
                 path: "/registration",
                 element: <Registration></Registration>
             },
+            // Contact Page
             {
                 path: "/contact",
                 element: <Contact></Contact>
             },
+            // All Reviews Page
             {
                 path: "/reviws",
                 element: <AllReview></AllReview>
             },
+            // Rooms Details Page
             {
                 path: "/rooms/:id",
                 element: <PrivateRoutes><RoomDetails></RoomDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
             },
+            // Rooms Details Page to Booking Form Page
             {
                 path: "/bookingForm/:id",
                 element: <BookNowForm></BookNowForm>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
-            },
-            {
-                path: "/bookingForm",
-                element: <PrivateRoutes><BookNowForm></BookNowForm></PrivateRoutes>
             }
         ]
     },

@@ -3,7 +3,7 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 const RoomDetails = () => {
     const roomSingleData = useLoaderData();
     const { _id, roomCategory, description, roomSize, availability, specialOffers, pricePerNight, imageLg, maxPerson } = roomSingleData;
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     console.log(roomSingleData);
 
     return (

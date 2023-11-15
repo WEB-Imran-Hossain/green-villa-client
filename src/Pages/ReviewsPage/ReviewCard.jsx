@@ -14,7 +14,7 @@ const ReviewCard = ({ review }) => {
                 <div className="card-body flex items-center">
                     <h2 className="text-xl font-bold">{client_name}</h2>
                     <h4 className="text-sm text-[#32CD32]">{place}</h4>
-                    <Rating className="text-2xl text-orange-500"
+                    <Rating className="text-2xl text-[#FF3811]"
                     placeholderRating={review?.rating}
                     emptySymbol={<FaRegStar />}
                     placeholderSymbol={<FaStar />}

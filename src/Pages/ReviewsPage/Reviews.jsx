@@ -49,7 +49,7 @@ const Reviews = () => {
                 </div>
 
                 <div className="card-body flex items-center">
-                  <Rating className="text-2xl text-orange-500"
+                  <Rating className="text-2xl text-[#FF3811]"
                     placeholderRating={review?.rating}
                     emptySymbol={<FaRegStar />}
                     placeholderSymbol={<FaStar />}

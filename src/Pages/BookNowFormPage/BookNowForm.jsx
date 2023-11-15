@@ -4,14 +4,18 @@ import {
   useLoaderData,
   useLocation,
   useNavigate,
+  useParams,
 } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 const BookNowForm = () => {
+  const { params } = useParams();
+  console.log("Paramsa form booking now form", params);
+
   const bookingData = useLoaderData();
-  console.log("Booking Now Form", bookingData);
+  console.log("Booking Now Form", bookingData._id);
   const { user } = useContext(AuthContext);
   const userLocation = useLocation();
   const userNavigate = useNavigate();
@@ -45,7 +49,7 @@ const BookNowForm = () => {
       Swal.fire({
         icon: "error",
         title: "Not Avilable",
-        text: "This Room has been already booked",
+        text: "This room has been already booked",
       });
       return;
     }
@@ -75,9 +79,19 @@ const BookNowForm = () => {
               });
             }
           });
+        // Rooms booking Identifier
+        axios
+          .patch(
+            `http://localhost:5000/rooms/${bookingData._id}`,
+            { status: "booked" }
+          )
+          .then((res) => {
+            console.log(res.data);
+          });
       }
     });
   };
+
 
   useEffect(() => {
     axios
@@ -173,9 +187,9 @@ const BookNowForm = () => {
                   type="submit"
                   value="Submit"
                 />
-                <div>
+                {/* <div>
                   {userNavigate(userLocation.state ? userLocation.state : "/")}
-                </div>
+                </div> */}
               </div>
             </form>
           </div>
