@@ -1,10 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import {
-  Link,
-  useLoaderData,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -40,6 +35,8 @@ const BookNowForm = () => {
       checkingDate,
       checkOutdate,
       roomId: bookingData._id,
+      description: bookingData.description,
+      roomCategory: bookingData.roomCategory,
     };
 
     // checking for booking details
@@ -62,7 +59,6 @@ const BookNowForm = () => {
       confirmButtonText: "Yes, Confirm!",
     }).then((result) => {
       if (result.isConfirmed) {
-
         axios
           .post("http://localhost:5000/bookings", bookingDetails, {
             withCredentials: true,
@@ -78,21 +74,19 @@ const BookNowForm = () => {
               });
             }
           });
-          
+
         // Rooms booking Identifier
         axios
-          .patch(
-            `http://localhost:5000/rooms/${bookingData._id}`,
-            { status: "booked" }
-          )
+          .patch(`http://localhost:5000/rooms/${bookingData._id}`, {
+            status: "booked",
+          })
           .then((res) => {
             console.log(res.data);
           });
-          userNavigate("/rooms")
+        userNavigate("/rooms");
       }
     });
   };
-
 
   useEffect(() => {
     axios

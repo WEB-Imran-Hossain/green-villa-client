@@ -9,7 +9,7 @@ const PostReview = () => {
         console.log(comments, name, email);
     }
     return (
-        <div className="mt-32 bg-base-200 space-y-5 p-10 rounded-lg">
+        <div className="mt-32 mb-32 bg-base-200 space-y-5 p-10 rounded-lg md:max-w-[70vw] mx-auto">
             <h2 className="text-2xl">Leave a Reply</h2>
             <p className="text-base font-normal text-[#737373]">Your email address will not be published. Required fields are marked <span className="text-[#FF3811]">*</span></p>
             <form onSubmit={handleReview} className="space-y-3">

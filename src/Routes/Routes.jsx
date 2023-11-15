@@ -12,6 +12,7 @@ import AllReview from "../Pages/ReviewsPage/AllReview";
 import Rooms from "../Pages/RoomsPage/Rooms";
 import MyBookings from "../Pages/MyBookingsPage/MyBookings";
 import PrivateRoutes from "./PrivateRoutes";
+import PostReview from "../Pages/ReviewsPage/PostReview";
 
 const router = createBrowserRouter([
     {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
             {
                 path: "/bookingForm",
                 element: <BookNowForm></BookNowForm>
+            },
+            {
+                path: "/postReview",
+                element: <PostReview></PostReview>    
             }
         ]
     },
