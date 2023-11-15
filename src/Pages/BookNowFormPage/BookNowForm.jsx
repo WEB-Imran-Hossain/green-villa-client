@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import {
   Link,
   useLoaderData,
-  useLocation,
   useNavigate,
   useParams,
 } from "react-router-dom";
@@ -17,7 +16,6 @@ const BookNowForm = () => {
   const bookingData = useLoaderData();
   console.log("Booking Now Form", bookingData._id);
   const { user } = useContext(AuthContext);
-  const userLocation = useLocation();
   const userNavigate = useNavigate();
   const [booking, setBooking] = useState([]);
   const [bookingInsertedId, setBookingInsertedId] = useState("");
@@ -56,7 +54,7 @@ const BookNowForm = () => {
 
     Swal.fire({
       title: `Confirm your booking`,
-      text: `Room Category: ${bookingData.roomCategory}, Price per Night: ${bookingData.pricePerNight}, CheckingDate: ${checkingDate}, CheckOutdate: ${checkOutdate}`,
+      text: `Price per Night: ${bookingData.pricePerNight}, CheckingDate: ${checkingDate}, CheckOutdate: ${checkOutdate}, Room Description: ${bookingData.description}`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#32CD32",
@@ -64,6 +62,7 @@ const BookNowForm = () => {
       confirmButtonText: "Yes, Confirm!",
     }).then((result) => {
       if (result.isConfirmed) {
+
         axios
           .post("http://localhost:5000/bookings", bookingDetails, {
             withCredentials: true,
@@ -79,6 +78,7 @@ const BookNowForm = () => {
               });
             }
           });
+          
         // Rooms booking Identifier
         axios
           .patch(
@@ -88,6 +88,7 @@ const BookNowForm = () => {
           .then((res) => {
             console.log(res.data);
           });
+          userNavigate("/rooms")
       }
     });
   };
@@ -187,9 +188,6 @@ const BookNowForm = () => {
                   type="submit"
                   value="Submit"
                 />
-                {/* <div>
-                  {userNavigate(userLocation.state ? userLocation.state : "/")}
-                </div> */}
               </div>
             </form>
           </div>

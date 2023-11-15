@@ -1,9 +1,10 @@
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { FaRegStar, FaStar } from "react-icons/fa";
+import Rating from "react-rating";
+import { Link, useLoaderData} from "react-router-dom";
 
 const RoomDetails = () => {
     const roomSingleData = useLoaderData();
-    const { _id, roomCategory, description, roomSize, availability, specialOffers, pricePerNight, imageLg, maxPerson } = roomSingleData;
-    // const navigate = useNavigate();
+    const { _id, roomCategory, description, roomSize, availability, specialOffers, pricePerNight, imageLg, maxPerson, reviews } = roomSingleData;
     console.log(roomSingleData);
 
     return (
@@ -44,14 +45,12 @@ const RoomDetails = () => {
                         <div>
                             <p className="text-xl font-bold text-[#32CD32]">Form ${pricePerNight}/Night</p>
                         </div>
-                        <div className="rating rating-md">
-                            <input type="radio" name="rating-9" className="rating-hidden" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                        </div>
+                        <Rating className="text-2xl text-[#FF3811]"
+                    placeholderRating={reviews?.reviews}
+                    emptySymbol={<FaRegStar />}
+                    placeholderSymbol={<FaStar />}
+                    fullSymbol={<FaStar />}
+                  />
                     </div>
                 </div>
                 <p className="text-2xl font-bold text-[#0B0B0B] mt-8">Person: {maxPerson}</p>

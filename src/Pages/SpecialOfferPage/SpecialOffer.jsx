@@ -68,7 +68,7 @@ const SpecialOffer = () => {
               <p className="py-4 text-base font-normal text-[#737373]">
                 The Horse Ride Package includes a curated riding experience tailored to your preferences.Choose from<br /> a leisurely ride for beginners, allowing you to connect with the gentle rhythm of your equine companion, <br />or opt for a more adventurous trail for those seeking an adrenaline boost. As you meander through lush <br />landscapes and scenic paths, you'll have the opportunity to witness the beauty of [Landmarks/Scenic Spots], creating lasting memories against the backdrop of nature's splendor.
               </p>
-              <Link to={"/bookingForm/"}>
+              <Link to={"/bookingForm"}>
               <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">
                 Book Now
               </button>

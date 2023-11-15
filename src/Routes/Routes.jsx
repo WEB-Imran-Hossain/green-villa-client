@@ -70,6 +70,14 @@ const router = createBrowserRouter([
                 path: "/bookingForm/:id",
                 element: <BookNowForm></BookNowForm>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+            },
+            {
+                path: "/mybookings",
+                element: <MyBookings></MyBookings>
+            },
+            {
+                path: "/bookingForm",
+                element: <BookNowForm></BookNowForm>
             }
         ]
     },
