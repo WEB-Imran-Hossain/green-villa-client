@@ -35,7 +35,7 @@ const UpdateMyBookings = () => {
                 <div className="card flex-shrink-0 shadow-2xl bg-base-100 p-5 rounded-none ">
                     <div className="card-body">
                         <h1 className="text-2xl font-semibold text-black">
-                            Update your Checkin and Checkout Date
+                            Update your Check In and Check Out Date
                         </h1>
                         <br />
                         <form onSubmit={handleUpdateDate}>

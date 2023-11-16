@@ -1,6 +1,7 @@
-import { Link} from "react-router-dom";
+import { Link, useLoaderData} from "react-router-dom";
 
 const SpecialOffer = () => {
+
   return (
     <div className=" max-w-[90vw] mx-auto space-y-4 space-y-4 mt-32">
       <h4 className="text-xl font-bold text-[#32CD32]">OFFERS</h4>

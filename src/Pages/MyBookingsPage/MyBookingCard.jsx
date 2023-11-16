@@ -8,7 +8,7 @@ const MyBookingCard = ({ myBooking, handleDelete }) => {
       <table className="table table-md">
         <tbody>
           <tr>
-            <div className="lg:grid lg:grid-cols-7 text-base flex flex-wrap">
+            <div className="lg:grid lg:grid-cols-7 text-base flex flex-wrap items-center">
               <td>{myBooking.fullName}</td>
               <td>{myBooking.email}</td>
               <td>{myBooking.phone}</td>
@@ -18,20 +18,20 @@ const MyBookingCard = ({ myBooking, handleDelete }) => {
               <td>
                 <div className="join lg:join-vertical join-horizontal lg:space-y-5 items-center gap-5">
                   <div>
-                    <button onClick={() => handleDelete(myBooking._id)} className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-base font-semibold rounded-none normal-case ">
+                    <button onClick={() => handleDelete(myBooking._id)} className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-base font-semibold rounded-none normal-case w-32 ">
                       Delete
                     </button>
                   </div>
                   <div>
                     <Link to={`/updateMyBookingData/${myBooking._id}`}>
-                      <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-base font-semibold rounded-none normal-case ">
+                      <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-base font-semibold rounded-none normal-case w-32 ">
                         Update Date
                       </button>
                     </Link>
                   </div>
                   <div>
                     <Link to={`/postReview/${myBooking._id}`}>
-                      <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-base font-semibold rounded-none normal-case ">
+                      <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-base font-semibold rounded-none normal-case w-32 ">
                         Review
                       </button>
                     </Link>

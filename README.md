@@ -1,8 +1,11 @@
-# React + Vite
+# Green Villa Hotel Booking Web Application features Project
+# Live URL: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 4 sections I select first for Home page design. Where: Map, Special Offers and Promotions, User Testimonials and Newsletter Signup used.
+- User Authentication, Navigation Bar and JWT Authentication have been connected correctly.
+- Access Control, 404 Page, 2 packages and Toast used correctly.
+- Reload, Responsive Design, Environment Variables, Animation, Extra Pages Recommendations (About Us, Contact Us, Testimonials) and Toast has been used correctly.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Chalnging Part this project
+- Users can select a room and choose the booking duration (single day) using a date picker. The system should ensure that users can only book available rooms.
+- Room bookings will display on the My Bookings page. From my booking page you can give your valuable feedback for booking deletion, booking time update and booking room.

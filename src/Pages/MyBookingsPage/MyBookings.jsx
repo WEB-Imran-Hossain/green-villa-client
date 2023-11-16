@@ -20,10 +20,10 @@ const MyBookings = () => {
         // console.log(" haldle delete", id);
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            text: "You won't to delete this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            confirmButtonColor: "#32CD32",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
@@ -58,6 +58,7 @@ const MyBookings = () => {
                             <th>Status</th>
                         </div>
                     </tr>
+                    <hr />
                 </thead>
                 {
                     myBookings.map(myBooking => <MyBookingCard key={user?.email} myBooking={myBooking} handleDelete={handleDelete}></MyBookingCard>)

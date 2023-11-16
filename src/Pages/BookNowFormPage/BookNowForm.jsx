@@ -137,6 +137,7 @@ const BookNowForm = () => {
                     type="date"
                     name="cdate"
                     className="input input-bordered"
+                    placeholder=""
                   />
                 </div>
                 <div className="form-control w-1/2">
