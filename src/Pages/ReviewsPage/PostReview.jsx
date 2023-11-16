@@ -1,12 +1,38 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+import axios from "axios";
+
 const PostReview = () => {
+    const { user } = useContext(AuthContext);
+    const bookingData = useLoaderData();
+    console.log("booking form data post review page", bookingData);
+
 
     const handleReview = event => {
         event.preventDefault();
         const comments = event.target.comments.value;
-        const name = event.target.name.value;
-        const email = event.target.email.value;
+        const rating = event.target.rating.value;
+        const review_time = event.target.review_time.value;
+        const reviewDetails = { roomId: bookingData.roomId, comments, rating, review_time }
+        console.log(comments, rating, review_time);
 
-        console.log(comments, name, email);
+        axios
+        .post("http://localhost:5000/reviews", reviewDetails, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          console.log(res.data);
+        //   setBookingInsertedId(res.data.insertedId);
+          if (res.data.insertedId) {
+            Swal.fire({
+              icon: "success",
+              title: "Successful",
+              text: "Review Sucessfully",
+            });
+          }
+        });
     }
     return (
         <div className="mt-32 mb-32 bg-base-200 space-y-5 p-10 rounded-lg md:max-w-[70vw] mx-auto">
@@ -19,10 +45,11 @@ const PostReview = () => {
 
                 <div className="flex flex-col lg:flex-row gap-3">
                     <div className="lg:w-1/2">
-                        <input type="text" name="name" placeholder="Name" required id="" className="w-full p-5" />
+                        <input type="number" name="rating" placeholder="Out of 5" required id="" className="w-full p-5" />
                     </div>
                     <div className="lg:w-1/2">
-                        <input type="email" name="email" placeholder="Email" required id="" className="w-full p-5" />
+                        <input type="datetime-local" name="review_time" placeholder="Time and Date" required id="" className="w-full p-5" value="2023-11-16T14:31"
+                            min="2023-11-01T00:00" max="2030-12-31T00:00" />
                     </div>
 
                 </div>
