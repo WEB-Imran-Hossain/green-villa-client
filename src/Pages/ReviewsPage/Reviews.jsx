@@ -13,7 +13,7 @@ AOS.init();
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/testimonials")
+    fetch("https://green-villa-server.vercel.app/testimonials")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

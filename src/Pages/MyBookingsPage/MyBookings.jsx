@@ -9,7 +9,7 @@ const MyBookings = () => {
     const [myBookings, setMyBookings] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/bookings?email=${user?.email}`, {
+        axios.get(`https://green-villa-server.vercel.app/bookings?email=${user?.email}`, {
             withCredentials: true,
         })
             .then(res => setMyBookings(res.data))
@@ -26,9 +26,9 @@ const MyBookings = () => {
             confirmButtonColor: "#32CD32",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:5000/bookings/${id}`).then(res => {
+                axios.delete(`https://green-villa-server.vercel.app/bookings/${id}`).then(res => {
                     console.log(res.data);
                     const filterData = myBookings.filter(item => item._id !== id)
                     setMyBookings(filterData)
@@ -39,8 +39,8 @@ const MyBookings = () => {
                     });
                 })
             }
-          });
-      
+        });
+
     }
     return (
         <div className="mt-32 max-w-[80vw] mx-auto">

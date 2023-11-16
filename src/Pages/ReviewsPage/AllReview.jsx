@@ -7,22 +7,22 @@ import { Link } from "react-router-dom";
 AOS.init();
 
 const AllReview = () => {
-    const [reviews, setReviews] = useState([]);
-    useEffect(() => {
-        fetch("http://localhost:5000/testimonials")
-          .then((res) => res.json())
-          .then((data) => setReviews(data));
-      }, []);
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    fetch("https://green-villa-server.vercel.app/testimonials")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
 
-    return (
-       <div className="mt-32 max-w-[90vw] mx-auto">
+  return (
+    <div className="mt-32 max-w-[90vw] mx-auto">
       <div className="p-4 mt-40 lg:mt-0">
         <div className="space-y-5 mb-10">
           <h4 className="text-xl font-bold text-[#32CD32]">
-          OUR GUESTS LOVE US
+            OUR GUESTS LOVE US
           </h4>
           <h5 className=" text-4xl md:text-5xl font-bold text-[#151515]">
-          WHAT OUR GUESTS ARE SAYING ABOUT US
+            WHAT OUR GUESTS ARE SAYING ABOUT US
             <p className="py-4 text-base font-normal text-[#737373]">
               Welcome to our <strong>Green Villa</strong> hotel, where luxury and comfort
               converge to create an unparalleled experience for our esteemed
@@ -41,7 +41,7 @@ const AllReview = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default AllReview;

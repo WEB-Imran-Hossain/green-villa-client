@@ -65,13 +65,13 @@ const router = createBrowserRouter([
             {
                 path: "/rooms/:id",
                 element: <PrivateRoutes><RoomDetails></RoomDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`https://green-villa-server.vercel.app/rooms/${params.id}`)
             },
             // Rooms Details Page to Booking Form Page
             {
                 path: "/bookingForm/:id",
                 element: <BookNowForm></BookNowForm>,
-                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`https://green-villa-server.vercel.app/rooms/${params.id}`)
             },
             {
                 path: "/mybookings",
@@ -84,12 +84,12 @@ const router = createBrowserRouter([
             {
                 path: "/postReview/:id",
                 element: <PostReview></PostReview>,
-                loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({ params }) => fetch(`https://green-villa-server.vercel.app/bookings/${params.id}`)
             },
             {
                 path: "/updateMyBookingData/:id",
                 element: <UpdateMyBookings></UpdateMyBookings>,
-                loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({ params }) => fetch(`https://green-villa-server.vercel.app/bookings/${params.id}`)
             }
         ]
     },

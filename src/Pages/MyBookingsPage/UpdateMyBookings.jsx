@@ -15,7 +15,7 @@ const UpdateMyBookings = () => {
             checkingDate,
             checkOutdate
         }
-        axios.patch(`http://localhost:5000/bookings/${data._id}`, updatedDate).then(res => {
+        axios.patch(`https://green-villa-server.vercel.app/bookings/${data._id}`, updatedDate).then(res => {
             console.log(res.data);
             if (res.data.matchedCount) {
                 Swal.fire({

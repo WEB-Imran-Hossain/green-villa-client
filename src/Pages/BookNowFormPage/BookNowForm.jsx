@@ -60,7 +60,7 @@ const BookNowForm = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .post("http://localhost:5000/bookings", bookingDetails, {
+          .post("https://green-villa-server.vercel.app/bookings", bookingDetails, {
             withCredentials: true,
           })
           .then((res) => {
@@ -77,7 +77,7 @@ const BookNowForm = () => {
 
         // Rooms booking Identifier
         axios
-          .patch(`http://localhost:5000/rooms/${bookingData._id}`, {
+          .patch(`https://green-villa-server.vercel.app/rooms/${bookingData._id}`, {
             status: "booked",
           })
           .then((res) => {
@@ -90,7 +90,7 @@ const BookNowForm = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/bookings", {
+      .get("https://green-villa-server.vercel.app/bookings", {
         withCredentials: true,
       })
       .then((res) => {

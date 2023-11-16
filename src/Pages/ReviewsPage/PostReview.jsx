@@ -16,24 +16,24 @@ const PostReview = () => {
         const comments = event.target.comments.value;
         const rating = event.target.rating.value;
         const review_time = event.target.review_time.value;
-        const reviewDetails = { roomId: bookingData.roomId, comments, rating, review_time, image_url:user.photoURL, client_name:user.displayName }
+        const reviewDetails = { roomId: bookingData.roomId, comments, rating, review_time, image_url: user.photoURL, client_name: user.displayName }
         console.log(comments, rating, review_time);
 
         axios
-        .post("http://localhost:5000/reviews", reviewDetails, {
-          withCredentials: true,
-        })
-        .then((res) => {
-          console.log(res.data);
-        //   setBookingInsertedId(res.data.insertedId);
-          if (res.data.insertedId) {
-            Swal.fire({
-              icon: "success",
-              title: "Successful",
-              text: "Review Sucessfully",
+            .post("https://green-villa-server.vercel.app/reviews", reviewDetails, {
+                withCredentials: true,
+            })
+            .then((res) => {
+                console.log(res.data);
+                //   setBookingInsertedId(res.data.insertedId);
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Successful",
+                        text: "Review Sucessfully",
+                    });
+                }
             });
-          }
-        });
     }
     return (
         <div className="mt-32 mb-32 bg-base-200 space-y-5 p-10 rounded-lg md:max-w-[70vw] mx-auto">

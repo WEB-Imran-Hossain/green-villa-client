@@ -5,10 +5,10 @@ const Rooms = () => {
   const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/rooms")
+    fetch("https://green-villa-server.vercel.app/rooms")
       .then((res) => res.json())
       .then((data) => {
-        const filterdData = data.filter(item=>item.status!=="booked")
+        const filterdData = data.filter(item => item.status !== "booked")
         setRooms(data);
       });
   }, []);

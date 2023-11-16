@@ -30,7 +30,7 @@ const RoomDetails = () => {
       setButtonDisable(true);
     }
 
-    fetch("http://localhost:5000/reviews")
+    fetch("https://green-villa-server.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, [roomSingleData.status]);
