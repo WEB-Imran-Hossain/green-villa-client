@@ -155,9 +155,9 @@ const Registration = () => {
               <div>
                 <input type="checkbox" required name="terms" id="terms" />
                 <label className="ml-2 label-text font-bold" htmlFor="terms">
-                Yes, I agree with{" "}<span> <Link className="link link-hover" href="#">
-                      Terms of Use Conditions
-                    </Link>
+                  Yes, I agree with{" "}<span> <Link className="link link-hover" href="#">
+                    Terms of Use Conditions
+                  </Link>
                   </span>
                 </label>
               </div>

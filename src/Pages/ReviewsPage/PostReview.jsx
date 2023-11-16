@@ -6,6 +6,7 @@ import axios from "axios";
 
 const PostReview = () => {
     const { user } = useContext(AuthContext);
+    console.log("review check", user);
     const bookingData = useLoaderData();
     console.log("booking form data post review page", bookingData);
 
@@ -15,7 +16,7 @@ const PostReview = () => {
         const comments = event.target.comments.value;
         const rating = event.target.rating.value;
         const review_time = event.target.review_time.value;
-        const reviewDetails = { roomId: bookingData.roomId, comments, rating, review_time }
+        const reviewDetails = { roomId: bookingData.roomId, comments, rating, review_time, image_url:user.photoURL, client_name:user.displayName }
         console.log(comments, rating, review_time);
 
         axios

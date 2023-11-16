@@ -9,7 +9,7 @@ const Rooms = () => {
       .then((res) => res.json())
       .then((data) => {
         const filterdData = data.filter(item=>item.status!=="booked")
-        setRooms(filterdData);
+        setRooms(data);
       });
   }, []);
 

@@ -1,4 +1,3 @@
-import { Link, useLoaderData} from "react-router-dom";
 
 const SpecialOffer = () => {
 
@@ -28,11 +27,11 @@ const SpecialOffer = () => {
               <p className="py-4 text-base font-normal text-[#737373]">
                 Immerse yourself in the allure of an extended stay, where 3 nights unlock a savings and heightened enjoyment. Picture yourself unwinding in the heart of ciry area, surrounded by the unique blend of modern convenience and timeless elegance that defines our hotel. With this special offer, you not only secure a luxurious retreat but also enjoy a substantial 20% discount on your entire stay.
               </p>
-              <Link to={"/bookingForm/"}>
+              
               <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">
                 Book Now
               </button>
-            </Link>
+           
             </div>
           </div>
           
@@ -49,11 +48,11 @@ const SpecialOffer = () => {
               <p className="py-4 text-base font-normal text-[#737373]">
                 Start your day with a traditional breakfast that captures the essence of our region.Indulge in fluffy<br /> pancakes drizzled with locally sourced honey, or savor a savory breakfast wrap<br /> filled with farm-fresh eggs, cheese, and a medley of aromatic spices. Wash it down with a cup of freshly brewed coffee or a refreshing herbal tea, setting the perfect tone for a day of exploration.
               </p>
-              <Link to={"/bookingForm"}>
+              
               <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">
                 Book Now
               </button>
-            </Link>
+           
             </div>
           </div>
         </div>
@@ -69,11 +68,9 @@ const SpecialOffer = () => {
               <p className="py-4 text-base font-normal text-[#737373]">
                 The Horse Ride Package includes a curated riding experience tailored to your preferences.Choose from<br /> a leisurely ride for beginners, allowing you to connect with the gentle rhythm of your equine companion, <br />or opt for a more adventurous trail for those seeking an adrenaline boost. As you meander through lush <br />landscapes and scenic paths, you'll have the opportunity to witness the beauty of [Landmarks/Scenic Spots], creating lasting memories against the backdrop of nature's splendor.
               </p>
-              <Link to={"/bookingForm"}>
               <button className="btn hover:bg-transparent text-white bg-[#FF3811] border-[#FF3811] hover:border-[#32CD32] hover:text-[#32CD32] text-lg font-semibold rounded-none normal-case ">
                 Book Now
               </button>
-            </Link>
             </div>
           </div>
           <div className="card-actions justify-center">

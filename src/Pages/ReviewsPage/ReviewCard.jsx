@@ -4,6 +4,7 @@ import Rating from 'react-rating';
 
 const ReviewCard = ({ review }) => {
     const { _id, client_name, place, rating, comments, image_url } = review;
+    console.log("image url checking testimonials",image_url);
     return (
             <div className="card card-side bg-base-100 shadow-xl flex flex-col">
                 <div>
