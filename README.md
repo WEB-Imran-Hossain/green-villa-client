@@ -1,5 +1,5 @@
 # Green Villa Hotel Booking Web Application features Project
-# Live URL: 
+# Live URL: https://green-villa.netlify.app/
 
 - 4 sections I select first for Home page design. Where: Map, Special Offers and Promotions, User Testimonials and Newsletter Signup used.
 - User Authentication, Navigation Bar and JWT Authentication have been connected correctly.
