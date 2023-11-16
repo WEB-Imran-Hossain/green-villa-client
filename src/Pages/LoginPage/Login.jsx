@@ -12,6 +12,7 @@ const Login = () => {
   const userLocation = useLocation();
   const userNavigate = useNavigate();
   const emailRef = useRef(null);
+  console.log(userLocation.state);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -28,8 +29,12 @@ const Login = () => {
     signIn(email, password)
       .then((res) => {
         console.log(res.user);
-        if (user) {
+        if (res.user) {
+          toast("User Login Successfully!!", {
+            position: "top-center",
+          });
           userNavigate(userLocation.state ? userLocation.state : "/");
+          console.log("login checked");
         }
 
         console.log(user);
