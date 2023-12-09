@@ -110,7 +110,6 @@ const Navbar = () => {
       </div>
 
       <div>
-        {user ? (
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="text-4xl rounded-full">
@@ -129,13 +128,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-        ) : (
+      
           <Link to="/login">
             <div className="text-4xl dropdown dropdown-end">
               <FaUserCircle></FaUserCircle>
             </div>
           </Link>
-        )}
+      
       </div>
     </div>
   );

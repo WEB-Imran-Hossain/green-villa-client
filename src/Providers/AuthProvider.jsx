@@ -55,9 +55,6 @@ const AuthProvider = ({ children }) => {
                         console.log(res.data);
                     })
             }
-
-
-
         });
         return () => {
             return unsubscribe();
