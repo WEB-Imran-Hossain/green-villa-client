@@ -1,5 +1,5 @@
 # About
-Every room in Green Villa Web Development is built on modern and quality design. Green Villa Hotel focuses on fancy and descriptive room details. By avoiding unnecessary elements and reducing visual clutter, Green Villa Hotel not only enhances the user experience but also helps contribute to more customers for business.
+Green Villa Hotel built in modern and quality design. Green Villa Hotel focuses on innovative and descriptive room details. By avoiding unnecessary elements and reducing visual clutter, Green Villa Hotel not only enhances the user experience but also helps generate more customers for the business.
 
 # Green Villa Hotel Booking Website features Information
 
